@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Tags */
+article {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+article:hover {
+    color: yellow;
+}
+
+body {
+    background-color: #eee;
+    margin: 0px;
+}
+
+h4 {
+    width: 480px;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 0px 0px 10px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+header, section {
+    position: fixed;
+    width: 560px;
+    text-align: center;
+    background-color: #fff;
+}
+
+main {
+    padding: 370px 20px 10px;
+}
+
+section {
+    top: 46px;
+}
+
+/* Classes */
+.container {
+    width: 560px;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 120px;
+    padding: 10px;
+}
+
+.show {
+    color: slategrey;
+}
+
+.title {
+    color: black;
+
+}
+
+/* .thumb {
+    height: 250px;
+} */
+
+/* .iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
