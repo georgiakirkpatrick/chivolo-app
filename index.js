@@ -31,7 +31,7 @@ $(document).ready(function(){
             $('main').append(`
                 <article class="item" data-key="${vid}">
                     <img src=${vidThumbnail} alt=${vidTitle} class="thumb">
-                    <h4 class="title">${vidTitle}<span class="show"> | Bino and Fino</span></h4>
+                    <h4 class="title">${vidTitle}</h4>
                 </article>
             `
             )    
