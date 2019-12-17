@@ -17,7 +17,7 @@ body {
 }
 
 h4 {
-    width: 480px;
+    width: 90%;
     background-color: lightgray;
     padding: 10px;
     margin: 0px 0px 10px;
@@ -60,4 +60,22 @@ section {
 .title {
     color: black;
 
+}
+
+@media screen and (max-width: 500px) {
+    header, section {
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;
+    }
+
+    .main-vid {
+        width: 100vw;
+    }
+    
+    .thumb {
+        width: 90%;
+    }
 }
