@@ -5,130 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
-    <title>KidTube</title>
+    <title>Chivolo</title>
 </head>
 
-<body>
+<body id=body>
     <div class="container">
-        <header>
-            <img src="images/chivolo-logo-no-background-white.png" alt="YouTube logo" class="logo">
+        <header id=header class="fixed">
+            <div id="selected-profile" class="selected-profile"></div>
+            <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
             <div class="button-section">
-                <!-- <button class="grownups-button"></button>
-                <button class="shows-button"></button> -->
+                <a href="#grownups-section"><button class="grownups-button">Grownups</button></a>
+                <a href="#shows-section"><button class="shows-button">Shows</button></a>
+                <a href="#history-section"><button class="history-button">History</button></a>
             </div>
-            <section id="video"></section>
+            <section class="main-vid-container js-main-vid-container"></section>
         </header>
     </div>
 
-    <main>
-        <section class="show-section">
-            <section class="show-icon-container">    
-                <div class="show-option">
-                    <img src="images/andi-mack.png" alt="Andi Mack" class="show-png">
-                    <h2>Andi Mack</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/bino-and-fino.png" alt="Bino and Fino" class="show-png">
-                    <h2>Bino and Fino</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/blues-clues.png" alt="Blue's Clues" class="show-png">
-                    <h2>Blue's Clues</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/burka-avenger.png" alt="Burka Avenger" class="show-png">
-                    <h2>Burka Avenger</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/chhota-bheem.png" alt="Chhota Bheem" class="show-png">
-                    <h2>Chhota Bheem</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/dinosaur-train.png" alt="Dinosaur Train" class="show-png">
-                    <h2>Dinosaur Train</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/doc-mcstuffins.png" alt="Doc McStuffins" class="show-png">
-                    <h2>Doc McStuffins</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/dora-and-friends.png" alt="Dora and Friends" class="show-png">
-                    <h2>Dora and Friends</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/elena-of-avalor.png" alt="Elena of Avalor" class="show-png">
-                    <h2>Elena of Avalor</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/legendary-dudas.png" alt="Legendary Dudas" class="show-png">
-                    <h2>Legendary Dudas</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/lou-and-lou.png" alt="Lou and Lou" class="show-png">
-                    <h2>Lou and Lou</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/molly-of-denali.png" alt="Molly of Denali" class="show-png">
-                    <h2>Molly of Denali</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/mouk.png" alt="Mouk" class="show-png">
-                    <h2>Mouk</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/nella-the-princess-knight.png" alt="Nella the Princess Knight" class="show-png">
-                    <h2>Nella the Princess Knight</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/ninas-world.png" alt="Nina's World" class="show-png">
-                    <h2>Nina's World</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/reading-rainbow.png" alt="Reading Rainbow" class="show-png">
-                    <h2>Reading Rainbow</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/scigirls.png" alt="Sci Girls" class="show-png">
-                    <h2>Sci Girls</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/sesame-street.png" alt="Sesame Street" class="show-png">
-                    <h2>Sesame Street</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/super-wings.png" alt="Super Wings" class="show-png">
-                    <h2>Super Wings</h2>
-                </div>
-
-                <div class="show-option">
-                    <img src="images/yo-gabba-gabba.png" alt="Yo Gabba Gabba" class="show-png">
-                    <h2>Yo Gabba Gabba</h2>
-                </div>
-            </section>
+    <main id=main class="main-padding">
+        <section class="js-video-section">
+            <!-- <a href="#main"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow vid-back-arrow"></a> -->
         </section>
+
+        <section id=shows-section class="shows-section js-shows-section">
+            <a href="#body" class="shows-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
+            <h1>Shows</h1>
+            <section class="show-option-container js-show-option-container"></section>
+        </section>
+
+        <section id=grownups-section class="grownups js-grownups">
+            <a href="#body" class="grownups-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
+            <h1>Grownups</h1>
+
+            <button class="nav-button js-profiles-button"><h2>Profiles</h2></button>
+            <div id="toggle-profiles" class="toggle-profiles">
+                <section id=current-profiles class="current-profiles"></section>
+                <button class="new-profile-button js-new-profile-button">New Profile</button>
+                <form id=new-profile-form action="/some-server-endpoint" method="post" class="new-profile-form">
+                    <fieldset>
+                        <legend>Kid Profile</legend>
+                        <div class="label-input-pair">
+                            <label for="first-name">First name</label>
+                            <input type="text" name="first-name" id="first-name" required>
+                        </div>
+                        
+                        <div class="label-input-pair"> 
+                            <label for="age">Age</label>
+                            <select name="age" id="age" required>
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16+</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <button class="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- These are features that will appear later -->
+
+            <!-- <button class="nav-button js-account-button"><h2>Account</h2></button>
+            <div id=toggle-account class="toggle-account">
+                <section id="current-account" class="current-account"></section>
+                <button class="log-in-button js-log-in-button">Log In / Switch User</button>
+                <form id=new-account-form action="" method="post" class="new-account-form">
+                    <fieldset>
+                        <legend>Grownup Account</legend>
+                        <div class="label-input-pair">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username"/>
+                        </div>    
+
+                        <div class="label-input-pair">
+                            <label for="password">Password</label>
+                            <input type="text" name="password" id="password"/>
+                        </div>
+                    </fieldset>
+                    <button class="submit">Submit</button>
+                </form>
+            </div>     -->
+
+            <!-- <button class="nav-button js-timer-button"><h2>Timer</h2></button>
+            <div id=toggle-timer class="toggle-timer">
+                <section class="timer-section">
+                    <form action="" class="timer-form">
+                        <fieldset>
+                            <legend>Set Timer</legend>
+                            <div class="label-input-pair">
+                                <label for="minutes">Minutes</label>
+                                <select name="minutes" id="minutes">
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                    <option value="60">60</option>
+                                </select>
+                            </div>
+                        </fieldset>    
+                        <button class="start-timer">Start Timer</button>
+                    </form>
+                </section>
+            </div> -->
+
+            <!-- <button class="nav-button js-About-button"><h2>About</h2></button>
+            <div id="toggle-about" class="toggle-about"></div> -->
+            
+        </section>
+
+        <section id=history-section class="history js-history">
+            <a href="#body" class="history-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
+            <h1>History</h1>
+            <div class="column-reverse js-his-column-reverse-div"></div>
+        </section>
+
+        <section class="times-up" ></section>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" 
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
         crossorigin="anonymous"></script>
     <script src="index.js"></script>
-</body>
+</bodyid=main>
 </html>
