@@ -8,32 +8,31 @@
     <title>Chivolo</title>
 </head>
 
-<body id=body>
+<body id="body">
     <div class="container">
-        <header id=header class="fixed">
-            <div id="selected-profile" class="selected-profile"></div>
+        <header id="header" class="fixed">
+            <button id="selected-profile" class="selected-profile"></button>
             <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
-            <div class="button-section">
+            <nav class="button-section">
                 <a href="#grownups-section"><button class="grownups-button">Grownups</button></a>
                 <a href="#shows-section"><button class="shows-button">Shows</button></a>
                 <a href="#history-section"><button class="history-button">History</button></a>
-            </div>
+            </nav>
             <section class="main-vid-container js-main-vid-container"></section>
         </header>
     </div>
 
-    <main id=main class="main-padding">
+    <main id="main" class="main-padding">
         <section class="js-video-section">
-            <!-- <a href="#main"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow vid-back-arrow"></a> -->
         </section>
 
-        <section id=shows-section class="shows-section js-shows-section">
+        <section id="shows-section" class="shows-section js-shows-section">
             <a href="#body" class="shows-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
             <h1>Shows</h1>
             <section class="show-option-container js-show-option-container"></section>
         </section>
 
-        <section id=grownups-section class="grownups js-grownups">
+        <section id="grownups-section" class="grownups js-grownups">
             <a href="#body" class="grownups-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
             <h1>Grownups</h1>
 
@@ -41,7 +40,7 @@
             <div id="toggle-profiles" class="toggle-profiles">
                 <section id=current-profiles class="current-profiles"></section>
                 <button class="new-profile-button js-new-profile-button">New Profile</button>
-                <form id=new-profile-form action="/some-server-endpoint" method="post" class="new-profile-form">
+                <form id="new-profile-form" action="/some-server-endpoint" method="post" class="new-profile-form">
                     <fieldset>
                         <legend>Kid Profile</legend>
                         <div class="label-input-pair">
@@ -75,62 +74,30 @@
                     <button class="submit">Submit</button>
                 </form>
             </div>
-
-            <!-- These are features that will appear later -->
-
-            <!-- <button class="nav-button js-account-button"><h2>Account</h2></button>
-            <div id=toggle-account class="toggle-account">
-                <section id="current-account" class="current-account"></section>
-                <button class="log-in-button js-log-in-button">Log In / Switch User</button>
-                <form id=new-account-form action="" method="post" class="new-account-form">
-                    <fieldset>
-                        <legend>Grownup Account</legend>
-                        <div class="label-input-pair">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" id="username"/>
-                        </div>    
-
-                        <div class="label-input-pair">
-                            <label for="password">Password</label>
-                            <input type="text" name="password" id="password"/>
-                        </div>
-                    </fieldset>
-                    <button class="submit">Submit</button>
-                </form>
-            </div>     -->
-
-            <!-- <button class="nav-button js-timer-button"><h2>Timer</h2></button>
-            <div id=toggle-timer class="toggle-timer">
-                <section class="timer-section">
-                    <form action="" class="timer-form">
-                        <fieldset>
-                            <legend>Set Timer</legend>
-                            <div class="label-input-pair">
-                                <label for="minutes">Minutes</label>
-                                <select name="minutes" id="minutes">
-                                    <option value="5">5</option>
-                                    <option value="10" selected>10</option>
-                                    <option value="15">15</option>
-                                    <option value="20">20</option>
-                                    <option value="25">25</option>
-                                    <option value="30">30</option>
-                                    <option value="35">35</option>
-                                    <option value="40">40</option>
-                                    <option value="45">45</option>
-                                    <option value="50">50</option>
-                                    <option value="55">55</option>
-                                    <option value="60">60</option>
-                                </select>
-                            </div>
-                        </fieldset>    
-                        <button class="start-timer">Start Timer</button>
-                    </form>
-                </section>
-            </div> -->
-
-            <!-- <button class="nav-button js-About-button"><h2>About</h2></button>
-            <div id="toggle-about" class="toggle-about"></div> -->
             
+            <button class="nav-button js-about-button"><h2>About</h2></button>
+            <div id="toggle-about" class="toggle-about">
+                <p>
+                    When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old step-daughter's history 
+                    on the YouTube Kids app, she found that very few videos featured characters 
+                    of color.  Georgia created Chivolo with content from the YouTube Data API to provide families 
+                    with kids' videos that reflect the diversity of the real world, helping children form positive 
+                    associations with people of all races.
+                </p>
+                <h3>Profiles</h3>
+                <p>
+                    Profiles help you curate content based on your child's age.  At this point, the profiles you create 
+                    will be erased when you close your web browser or refresh the Chivolo page.  Georgia plans to update
+                    Chivolo to address this issue when she learns how to use servers.
+                </p>
+                <h3>Contact</h3>
+                <p>
+                    Have show recommendations?  Technical issues?  Suggestions?  Please email Georgia!
+                </p>
+                <a href="mailto:georgia.kirkpatrick@gmail.com">georgia.kirkpatrick@gmail.com</a>
+               
+            </div>
+
         </section>
 
         <section id=history-section class="history js-history">
@@ -138,13 +105,11 @@
             <h1>History</h1>
             <div class="column-reverse js-his-column-reverse-div"></div>
         </section>
-
-        <section class="times-up" ></section>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" 
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
         crossorigin="anonymous"></script>
     <script src="index.js"></script>
-</bodyid=main>
+</body>
 </html>
