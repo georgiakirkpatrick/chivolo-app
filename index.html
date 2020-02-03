@@ -14,97 +14,99 @@
             <button id="selected-profile" class="selected-profile"></button>
             <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
             <nav class="button-section">
-                <a href="#grownups-section"><button class="grownups-button">Grownups</button></a>
-                <a href="#shows-section"><button class="shows-button">Shows</button></a>
-                <a href="#history-section"><button class="history-button">History</button></a>
+                <button class="grownups-button">Grownups</button>
+                <button class="shows-button">Shows</button>
+                <button class="history-button">History</button>
             </nav>
-            <section class="main-vid-container js-main-vid-container"></section>
+            <div class="main-vid-container js-main-vid-container"></div>
         </header>
-    </div>
+    
 
-    <main id="main" class="main-padding">
-        <section class="js-video-section">
-        </section>
+        <main id="main" class="main-padding">
+            <section class="video-section js-video-section">
+            </section>
 
-        <section id="shows-section" class="shows-section js-shows-section">
-            <a href="#body" class="shows-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
-            <h1>Shows</h1>
-            <section class="show-option-container js-show-option-container"></section>
-        </section>
+            <section id="shows-section" class="shows-section js-shows-section">
+                <a href="#body" class="shows-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
+                <h2>Shows</h2>
+                <section class="show-option-container js-show-option-container"></section>
+            </section>
 
-        <section id="grownups-section" class="grownups js-grownups">
-            <a href="#body" class="grownups-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
-            <h1>Grownups</h1>
+            <section id="grownups-section" class="grownups js-grownups">
+                <a href="#body" class="grownups-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
+                <h2>Grownups</h2>
 
-            <button class="nav-button js-profiles-button"><h2>Profiles</h2></button>
-            <div id="toggle-profiles" class="toggle-profiles">
-                <section id=current-profiles class="current-profiles"></section>
-                <button class="new-profile-button js-new-profile-button">New Profile</button>
-                <form id="new-profile-form" action="/some-server-endpoint" method="post" class="new-profile-form">
-                    <fieldset>
-                        <legend>Kid Profile</legend>
-                        <div class="label-input-pair">
-                            <label for="first-name">First name</label>
-                            <input type="text" name="first-name" id="first-name" required>
-                        </div>
-                        
-                        <div class="label-input-pair"> 
-                            <label for="age">Age</label>
-                            <select name="age" id="age" required>
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16+</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                    <button class="submit">Submit</button>
-                </form>
-            </div>
-            
-            <button class="nav-button js-about-button"><h2>About</h2></button>
-            <div id="toggle-about" class="toggle-about">
-                <p>
-                    When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old step-daughter's history 
-                    on the YouTube Kids app, she found that very few videos featured characters 
-                    of color.  Georgia created Chivolo with content from the YouTube Data API to provide families 
-                    with kids' videos that reflect the diversity of the real world, helping children form positive 
-                    associations with people of all races.
-                </p>
-                <h3>Profiles</h3>
-                <p>
-                    Profiles help you curate content based on your child's age.  At this point, the profiles you create 
-                    will be erased when you close your web browser or refresh the Chivolo page.  Georgia plans to update
-                    Chivolo to address this issue when she learns how to use servers.
-                </p>
-                <h3>Contact</h3>
-                <p>
-                    Have show recommendations?  Technical issues?  Suggestions?  Please email Georgia!
-                </p>
-                <a href="mailto:georgia.kirkpatrick@gmail.com">georgia.kirkpatrick@gmail.com</a>
-               
-            </div>
+                <button class="nav-button js-profiles-button">Profiles</button>
+                <div id="toggle-profiles" class="toggle-profiles">
+                    <div id="current-profiles" class="current-profiles"></div>
+                    <form id="new-profile-form" action="/some-server-endpoint" method="post" class="new-profile-form">
+                        <fieldset>
+                            <legend>Kid Profile</legend>
+                            <div class="label-input-pair">
+                                <label for="first-name">First name</label>
+                                <input type="text" name="first-name" id="first-name" maxlength="18" required>
+                            </div>
+                            
+                            <div class="label-input-pair"> 
+                                <label for="age">Age</label>
+                                <select name="age" id="age" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16+</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <button class="submit">Submit</button>
+                    </form>
+                    <button class="profile-section-button js-new-profile-button">New Profile</button>
+                    <button class="profile-section-button js-edit-profiles">Edit Profiles</button>
+                    <button class="done-editing js-done-editing">Done Editing</button>
+                </div>
+                
+                <button class="nav-button js-about-button">About</button>
+                <div id="toggle-about" class="toggle-about">
+                    <p>
+                        When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old stepdaughter's history 
+                        on the YouTube Kids app, she found that very few videos featured characters 
+                        of color.  Georgia created Chivolo with content from the YouTube Data API to provide families 
+                        with kids' videos that reflect the diversity of the real world, helping children form positive 
+                        associations with people of all races.
+                    </p>
+                    <h3>Profiles</h3>
+                    <p>
+                        Profiles help you curate content based on your child's age.  At this point, the profiles you create 
+                        will be erased when you close your web browser or refresh the Chivolo page.  Georgia plans to update
+                        Chivolo to address this issue when she learns how to use servers.
+                    </p>
+                    <h3>Contact</h3>
+                    <p>
+                        Have show recommendations?  Technical issues?  Suggestions?  Please email Georgia!
+                    </p>
+                    <a href="mailto:georgia.kirkpatrick@gmail.com">georgia.kirkpatrick@gmail.com</a>
+                
+                </div>
 
-        </section>
+            </section>
 
-        <section id=history-section class="history js-history">
-            <a href="#body" class="history-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
-            <h1>History</h1>
-            <div class="column-reverse js-his-column-reverse-div"></div>
-        </section>
+            <section id="history-section" class="history js-history">
+                <a href="#body" class="history-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
+                <h2>History</h2>
+                <div class="column-reverse js-his-column-reverse-div"></div>
+            </section>
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" 

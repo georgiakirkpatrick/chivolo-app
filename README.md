@@ -8,7 +8,7 @@ https://georgiakirkpatrick.github.io/chivolo/
 
 ## Motivation
 
-When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old step-daughter's viewing history on the YouTube Kids app, she found that very few videos featured characters of color.  Georgia created Chivolo with content from the YouTube Data API to provide families with kids' videos that reflect the diversity of the real world, helping children form positive associations with people of all races.
+When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old stepdaughter's viewing history on the YouTube Kids app, she found that very few videos featured characters of color.  Georgia created Chivolo with content from the YouTube Data API to provide families with kids' videos that reflect the diversity of the real world, helping children form positive associations with people of all races.
 
 ## Summary
 

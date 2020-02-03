@@ -1,21 +1,22 @@
 'use strict'; 
 
-$('.selected-profile').hide()
 // This prevents profile settings to affect app content until a profile is selected by the user.
     
 const allChivoloShows = [
 // The allChivoloPlaylists array includes information about all the shows approved for the Chivolo app.
 // YouTube Data API fetch details included in "apiUrl" in allChivoloShows:
     // API key used in fetch request is 'AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM'
+    // Alternate API key: AIzaSyDzfQ-Btr2BRJm4kmrsYT6JqLTWu-RPbsk
+    // Second alternate API key: AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU
     // playlistItems URL='https://www.googleapis.com/youtube/v3/playlistItems'
     // maxResults is set to 20
 
     {playlistTitle: "Bino and Fino",
     playlistId: "PLWpyJMXD1C42sM5hjoKxgpYA606Q4KK8X",
-    recommendedMinAge: 2,
+    recommendedMinAge: 1,
     iconImg: "images/bino-and-fino.png",
     imgAlt: "Bino-and-Fino",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLWpyJMXD1C42sM5hjoKxgpYA606Q4KK8X&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLWpyJMXD1C42sM5hjoKxgpYA606Q4KK8X&maxResults=20`
     },
 
     {playlistTitle: "Andi Mack",
@@ -23,15 +24,15 @@ const allChivoloShows = [
     recommendedMinAge: 10,
     iconImg: "images/andi-mack.png",
     imgAlt: "Andi-Mack",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLiv1IUQDVSNLrez97DYcPXJ4swHBaZDlb&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLiv1IUQDVSNLrez97DYcPXJ4swHBaZDlb&maxResults=20`
     },
 
     {playlistTitle: "Blue's Clues",
     playlistId: "PL3qHjxSSl7AFH8-E_Oz2_G1scCUuYV_WW",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/blues-clues.png",
     imgAlt: "Blues-Clues",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL3qHjxSSl7AFH8-E_Oz2_G1scCUuYV_WW&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL3qHjxSSl7AFH8-E_Oz2_G1scCUuYV_WW&maxResults=20`
     },
 
     {playlistTitle: "Burka Avenger",
@@ -39,7 +40,7 @@ const allChivoloShows = [
     recommendedMinAge: 7,
     iconImg: "images/burka-avenger.png",
     imgAlt: "Burka-Avenger",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLWpyJMXD1C41AX7zXnbq9DO5SQvuwd0ot&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLWpyJMXD1C41AX7zXnbq9DO5SQvuwd0ot&maxResults=20`
     },
 
     {playlistTitle: "Chhota Bheem",
@@ -47,15 +48,15 @@ const allChivoloShows = [
     recommendedMinAge: 3,
     iconImg: "images/chhota-bheem.png",
     imgAlt: "Chhota-Bheem",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL0rMr_qVm_FLXkMOjpPleUrdD4GvHwYev&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL0rMr_qVm_FLXkMOjpPleUrdD4GvHwYev&maxResults=20`
     },
 
     {playlistTitle: "Dinosaur Train",
     playlistId: "PLa8HWWMcQEGRwHO2UzoBBWnbByuCpbRAE",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/dinosaur-train.png",
     imgAlt: "Dinosaur-Train",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLa8HWWMcQEGRwHO2UzoBBWnbByuCpbRAE&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLa8HWWMcQEGRwHO2UzoBBWnbByuCpbRAE&maxResults=20`
     },
 
     {playlistTitle: "Doc McStuffins",
@@ -63,7 +64,7 @@ const allChivoloShows = [
     recommendedMinAge: 4,
     iconImg: "images/doc-mcstuffins.png",
     imgAlt: "Doc-McStuffins",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL3ADDC3A56EAFB37C&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL3ADDC3A56EAFB37C&maxResults=20`
     },
 
     {playlistTitle: "Dora and Friends",
@@ -71,7 +72,7 @@ const allChivoloShows = [
     recommendedMinAge: 5,
     iconImg: "images/dora-and-friends.png",
     imgAlt: "Dora-and-Friends",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL3qHjxSSl7AFXgXVoF4cB6Wd1cjy50goi&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL3qHjxSSl7AFXgXVoF4cB6Wd1cjy50goi&maxResults=20`
     },
 
     {playlistTitle: "Elena of Avalor",
@@ -79,7 +80,7 @@ const allChivoloShows = [
     recommendedMinAge: 5,
     iconImg: "images/elena-of-avalor.png",
     imgAlt: "Elena-of-Avalor",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL2m1vjiMH_hPMvLfmmiMXQUIVMrr_JovZ&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL2m1vjiMH_hPMvLfmmiMXQUIVMrr_JovZ&maxResults=20`
     },
 
     {playlistTitle: "Legendary Dudas",
@@ -87,15 +88,15 @@ const allChivoloShows = [
     recommendedMinAge: 9,
     iconImg: "images/legendary-dudas.png",
     imgAlt: "Legendary-Dudas",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLJb1AL9zU1GqdTD3cvhjRCEHaxYBXUlXs&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLJb1AL9zU1GqdTD3cvhjRCEHaxYBXUlXs&maxResults=20`
     },
 
     {playlistTitle: "Lou and Lou",
     playlistId: "PL2m1vjiMH_hPDuAk-RYiciqlh6wf99onV",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/lou-and-lou.png",
     imgAlt: "Lou-and-Lou",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL2m1vjiMH_hPDuAk-RYiciqlh6wf99onV&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL2m1vjiMH_hPDuAk-RYiciqlh6wf99onV&maxResults=20`
     },
 
     {playlistTitle: "Molly of Denali",
@@ -103,7 +104,7 @@ const allChivoloShows = [
     recommendedMinAge: 5,
     iconImg: "images/molly-of-denali.png",
     imgAlt: "Molly-of-Denali",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLWpyJMXD1C42wh_BKrkVw1aC8znACSIUs&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLWpyJMXD1C42wh_BKrkVw1aC8znACSIUs&maxResults=20`
     },
 
     {playlistTitle: "Mouk",
@@ -111,23 +112,23 @@ const allChivoloShows = [
     recommendedMinAge: 4,
     iconImg: "images/mouk.png",
     imgAlt: "Mouk",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLbsU5JkEtkPQPQJBG52a1k9KckIQbuTaU&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLbsU5JkEtkPQPQJBG52a1k9KckIQbuTaU&maxResults=20`
     },
 
     {playlistTitle: "Nella the Princess Knight",
     playlistId: "PL3qHjxSSl7AFFYNsE2JNvFI_S8Q2Xw0jb",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/nella-the-princess-knight.png",
     imgAlt: "Nella-the-Princess-Knight",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL3qHjxSSl7AFFYNsE2JNvFI_S8Q2Xw0jb&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL3qHjxSSl7AFFYNsE2JNvFI_S8Q2Xw0jb&maxResults=20`
     },
 
     {playlistTitle: "Nina's World",
     playlistId: "PL_EANcmOcL7JcpmtUW6bRpPz6ov6UW55G",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/ninas-world.png",
     imgAlt: "Ninas-World",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL_EANcmOcL7JcpmtUW6bRpPz6ov6UW55G&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL_EANcmOcL7JcpmtUW6bRpPz6ov6UW55G&maxResults=20`
     },
 
     {playlistTitle: "Sci Girls",
@@ -135,31 +136,31 @@ const allChivoloShows = [
     recommendedMinAge: 7,
     iconImg: "images/scigirls.png",
     imgAlt: "Sci-Girls",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLeE9Z9we25wQVs5-eyjeq_aWLUin0PQeS&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLeE9Z9we25wQVs5-eyjeq_aWLUin0PQeS&maxResults=20`
     },
 
     {playlistTitle: "Sesame Street",
     playlistId: "PL8TioFHubWFuzQJ8mGfvjv70pmuorq-ZM",
-    recommendedMinAge: 2,
+    recommendedMinAge: 1,
     iconImg: "images/sesame-street.png",
     imgAlt: "Sesame-Street",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL8TioFHubWFuzQJ8mGfvjv70pmuorq-ZM&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL8TioFHubWFuzQJ8mGfvjv70pmuorq-ZM&maxResults=20`
     },
 
     {playlistTitle: "Super Wings",
     playlistId: "PL-nQOC8BAGD0YFJqr1R_XTbjokhRh2jv5",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/super-wings.png",
     imgAlt: "Super-Wings",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PL-nQOC8BAGD0YFJqr1R_XTbjokhRh2jv5&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PL-nQOC8BAGD0YFJqr1R_XTbjokhRh2jv5&maxResults=20`
     },
 
     {playlistTitle: "Yo Gabba Gabba",
     playlistId: "PLc7QkGFtZUZ73cexJsrEzjXkiKxv5qi_N",
-    recommendedMinAge: 3,
+    recommendedMinAge: 1,
     iconImg: "images/yo-gabba-gabba.png",
     imgAlt: "Yo-Gabba-Gabba",
-    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM&playlistId=PLc7QkGFtZUZ73cexJsrEzjXkiKxv5qi_N&maxResults=20`
+    apiUrl: `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyB6jgavInj6VXlgRLWDpHMzec0o0WHLnnU&playlistId=PLc7QkGFtZUZ73cexJsrEzjXkiKxv5qi_N&maxResults=20`
     },
 ]
 
@@ -177,7 +178,7 @@ function enableShowButtons() {
     $('.js-show-option-container').on('click', '.js-show-option', function() {
         let selectedShow = $(this).attr('data-show')
 
-        showSelector(selectedShow)
+showSelector(selectedShow)
     })
 }
 
@@ -193,10 +194,12 @@ function displayLatestVid(latestVidForShow) {
     let vidThumbnail = latestVidForShow.snippet.thumbnails.high.url
     let vidTitle = latestVidForShow.snippet.title
     let vid = latestVidForShow.snippet.resourceId.videoId
+    let vidTitleDashes = vidTitle.replace(/\s/g, "-")
+
     $('.js-video-section').append(`
             <article class="video-option" data-key="${vid}" data-thumb="${vidThumbnail}" data-title="${vidTitle}">
-                <img src=${vidThumbnail} alt=${vidTitle} class="vid-thumbnail">
-                <h4 class="title">${vidTitle}</h4>
+                <img src=${vidThumbnail} alt=${vidTitleDashes} class="vid-thumbnail">
+                <h4 class="vid-title">${vidTitle}</h4>
             </article>
         `
     )
@@ -207,7 +210,7 @@ function displayShowOption(show) {
         <a href="#main">
             <div class="show-option js-show-option" data-show=${show.imgAlt}>
                 <img src=${show.iconImg} alt=${show.imgAlt} class="show-png">
-                <h2>${show.playlistTitle}</h2>
+                <h4 class="show-title">${show.playlistTitle}</h4>
             </div>
         </a>`
     )
@@ -219,7 +222,7 @@ function displayShowAndVidOptions() {
     let selectedProfile = document.getElementById("selected-profile")
     let selectedAge = $('.js-selected-profile-age').attr('data-age')
 
-    console.log('`displayShowAndVidOptions` ran and `selectedAge` is ', selectedAge)
+    // console.log('`displayShowAndVidOptions` ran and `selectedAge` is ', selectedAge)
 
     if ( selectedProfile.style.display === "none") {
 
@@ -256,6 +259,7 @@ function vidSelector() {
         let selectedVidId = $(this).attr('data-key')
         let vidThumbnail = $(this).attr('data-thumb')
         let vidTitle = $(this).attr('data-title')
+        let vidTitleDashes = vidTitle.replace(/\s/g, "-")
 
         $('.js-main-vid-container').show()
         $('.js-video-section').show()
@@ -267,8 +271,8 @@ function vidSelector() {
 
         $('.js-his-column-reverse-div').append(`
             <article class="video-option js-selected-show" data-key="${selectedVidId}" data-thumb="${vidThumbnail}" data-title="${vidTitle}">
-                <img src=${vidThumbnail} alt=${vidTitle} class="vid-thumbnail">
-                <h4 class="title">${vidTitle}</h4>
+                <img src=${vidThumbnail} alt=${vidTitleDashes} class="vid-thumbnail">
+                <h4 class="vid-title">${vidTitle}</h4>
             </article>`)
     })
 }
@@ -301,16 +305,10 @@ function filterOutPrivateVids(showItems) {
 fetchAllShowData()
     .then((showDataList) => {
         allChivoloShowsWithItems = allChivoloShows.map((show, i) => {
-        
-        console.log({
-            show,
-            showItems: filterOutPrivateVids(showDataList[i].items)
-            })
-
-        return {
-            ...show,
-            showItems: filterOutPrivateVids(showDataList[i].items)
-        }
+            return {
+                ...show,
+                showItems: filterOutPrivateVids(showDataList[i].items)
+            }
         })
     })
     .then(() => {
@@ -336,6 +334,10 @@ function fetchAllShowData() {
 }
 
 function handleChivolo() {
+    $('.selected-profile').hide()
+    $('.js-edit-profiles').hide()
+    $('.js-done-editing').hide()
+
     fetchAllShowData()
 }
 
@@ -355,6 +357,9 @@ $('header').on('click', '.logo', function() {
     $('.shows-back-arrow').hide()
     $('.history').hide()
     $('main').addClass('main-padding')
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#body").offset().top
+    }, 2000);
 })
 
 $('.button-section').on('click', '.grownups-button', function() {
@@ -382,6 +387,9 @@ $('.button-section').on('click', '.shows-button', function() {
     $('header').removeClass('fixed')
     $('header').addClass('relative')
     $('main').removeClass('main-padding')
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#shows-section").offset().top
+    }, 2000);
 })
 
 $('.button-section').on('click', '.history-button', function() {
@@ -436,7 +444,7 @@ $('.button-section').on('click', '.history-button', function() {
         }
     }
 
-    $('.toggle-profiles').on('click', '.new-profile-button', function() {
+    $('.toggle-profiles').on('click', '.js-new-profile-button', function() {
         toggleNewProfile()
     })
 
@@ -451,16 +459,19 @@ $('.button-section').on('click', '.history-button', function() {
         if (profileName && profileAge) {
 
             $('.current-profiles').append(`
-            <button class='profile' data-name=${profileName} data-age=${profileAge}>
+            <button id=${profileName} class='profile' data-name=${profileName} data-age=${profileAge}>
                 <p class="profile-p">${profileName}</p>
                 <p class="profile-p">Age: ${profileAge}</p>
             </button>
+            <button class='delete js-delete' data-name=${profileName}>Delete</button>
             `)
 
             $('#first-name').val('')
             $('#age').val('')
             $('.new-profile-form').hide()
+            $('.js-delete').hide()
             $('.selected-profile').empty()
+            $('.js-edit-profiles').show()
             $('.selected-profile').show()
             $('.selected-profile').append(`<p class="profile-p js-selected-profile-name" data-name=${profileName}>${profileName}</p> <p class="profile-p js-selected-profile-age" data-age=${profileAge}>Age: ${profileAge}</p>`)
             $('.js-video-section').empty()
@@ -481,6 +492,32 @@ $('.button-section').on('click', '.history-button', function() {
         $('.js-show-option-container').empty()
         sendFirstShowToVidPlayer()
         displayShowAndVidOptions()
+    })
+
+    $('.toggle-profiles').on('click', '.js-edit-profiles', function() {
+        $('.js-delete').show()
+        $(this).hide()
+        $('.js-done-editing').show()
+    })
+
+    $('.current-profiles').on('click', '.js-delete', function() {
+        let deleteName = $(this).attr('data-name')
+        let deleteProfile = document.getElementById(deleteName)
+
+        $(deleteProfile).hide()
+        $(this).remove()
+        $('.selected-profile').empty()
+        $('.selected-profile').hide()
+        $('.js-video-section').empty()
+        $('.js-show-option-container').empty()
+        sendFirstShowToVidPlayer()
+        displayShowAndVidOptions()
+    })
+
+    $('.toggle-profiles').on('click', '.js-done-editing', function() {
+        $('.js-delete').hide()
+        $('.js-edit-profiles').show()
+        $('.js-done-editing').hide()
     })
 
     function toggleAbout() {
@@ -535,11 +572,12 @@ $('.button-section').on('click', '.history-button', function() {
             let vidThumbnail = selectedShowItems[i].snippet.thumbnails.high.url
             let vidTitle = selectedShowItems[i].snippet.title
             let vid = selectedShowItems[i].snippet.resourceId.videoId
+            let vidTitleDashes = vidTitle.replace(/\s/g, "-")
 
             $('.js-video-section').append(`
                 <article class="video-option js-selected-show" data-key="${vid}" data-thumb="${vidThumbnail}" data-title="${vidTitle}">
-                    <img src=${vidThumbnail} alt=${vidTitle} class="vid-thumbnail">
-                    <h4 class="title">${vidTitle}</h4>
+                    <img src=${vidThumbnail} alt=${vidTitleDashes} class="vid-thumbnail">
+                    <h4 class="vid-title">${vidTitle}</h4>
                 </article>` )
         }
     }
