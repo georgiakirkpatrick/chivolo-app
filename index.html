@@ -23,13 +23,12 @@
     
 
         <main id="main" class="main-padding">
-            <section class="video-section js-video-section">
-            </section>
+            <div class="video-section js-video-section"></div>
 
             <section id="shows-section" class="shows-section js-shows-section">
                 <a href="#body" class="shows-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
                 <h2>Shows</h2>
-                <section class="show-option-container js-show-option-container"></section>
+                <div class="show-option-container js-show-option-container"></div>
             </section>
 
             <section id="grownups-section" class="grownups js-grownups">
@@ -49,7 +48,7 @@
                             
                             <div class="label-input-pair"> 
                                 <label for="age">Age</label>
-                                <select name="age" id="age" required>
+                                <select name="age" id="age">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -106,8 +105,8 @@
                 <h2>History</h2>
                 <div class="column-reverse js-his-column-reverse-div"></div>
             </section>
-        </div>
-    </main>
+        </main>
+    </div>    
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" 
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
