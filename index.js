@@ -168,6 +168,8 @@ let allChivoloShowsWithItems = [
 
 function listenForDoneEditing() {
     $('.profiles-section').on('click', '.js-done-editing', function() {
+        console.log('done editing clicked')
+
         $('.js-edit-buttons-div').hide()
         $('.js-edit-profiles').show()
         $('.js-done-editing').hide()
@@ -185,7 +187,7 @@ function checkForEmptyCurrentProfilesDiv() {
 
 function listenForDelete() {
     $('.current-profiles').on('click', '.js-delete', function() {
-        
+
         let deleteName = $(this).attr('data-name')
         let deleteProfileDiv = document.getElementById(deleteName)
         let selectedProfileName = $('.selected-profile').attr('data-name')
@@ -215,6 +217,8 @@ function listenForEditProfiles() {
         $('.js-edit-buttons-div').show()
         $('.js-done-editing').show()
     })
+
+    listenForDoneEditing()
 }
 
 function editAgeFormSubmit(editName, formId) {
@@ -246,7 +250,7 @@ function editAgeFormSubmit(editName, formId) {
 function editProfileFormEdit() {
     $('.js-edit-buttons-div').on('click', '.js-edit', function() {
         let editName = $(this).attr('data-name')
-        let editAgeForm = document.getElementById(`edit-age-${editName}`)
+        // let editAgeForm = document.getElementById(`edit-age-${editName}`)
         let formId = `#edit-age-${editName}`
 
         $(formId).show()
@@ -254,7 +258,6 @@ function editProfileFormEdit() {
         $(`.js-profile-age-${editName}`).hide()
 
         editAgeFormSubmit(editName, formId)
-        listenForDoneEditing()
     })
 }
 
