@@ -14,9 +14,10 @@ body {
 
 button {
     height: 35px;
-    background-color: #000;
+    background-color: #0000;
     border: 3px solid #fff;
     border-radius: 6px;
+    padding: 2px 2px 2px;
     margin: 10px auto 10px auto;
 }
 
@@ -26,16 +27,17 @@ button:active {
     border: 3px solid #fff;
 }
 
+
 fieldset {
     border: none;
-    padding: 10px;
-    margin: 10px;
 }
 
-h1, h2, h3 {
+form {
     text-align: center;
-    margin: 0px;
-    line-height: 29px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
 }
 
 h2 {
@@ -43,9 +45,17 @@ h2 {
     font-size: 40px;
 }
 
+h3 {
+    margin: 0px;
+    line-height: 50px;
+    font-size: 30px;
+    margin: 10px;
+}
+
 h4 {
     color: #fff;
     line-height: 1.3;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -59,7 +69,7 @@ header {
     width: 100%;
     margin: auto;
     text-align: center;
-    z-index: 3;
+    z-index: 2;
     background-color: #000;
 }
 
@@ -70,7 +80,7 @@ input {
 
 main {
     display: initial;
-    width: 375px;
+    width: 100vw;
     margin: auto;
 }
 
@@ -82,13 +92,25 @@ option:after {
     color: #000;
 }
 
+.overlay-text p {
+    margin: 5px;
+}
+
 select {
     background: #fff;
     color: #000;
 }    
 
+.about-section {
+    margin: 20px 20px 20px;
+}
+
+.align-center {
+    text-align: center;
+}
+
 .back-arrow {
-    height: 50px;
+    height: 35px;
     margin: 20px;
 }
 
@@ -97,8 +119,7 @@ select {
 }
 
 .button-section {
-    display: initial;
-    /* padding-bottom: 10px; */
+    text-align: center;
 }
 
 .column-reverse {
@@ -124,10 +145,8 @@ select {
     text-align: center;
 }
 
-.delete {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.delete .edit {
+    display: inline-block;
     height: 30px;
     padding: 10px;
     margin: 5px auto 10px;
@@ -135,9 +154,20 @@ select {
 
 .done-editing {
     display: block;
-    width: 150px;
     background: #fff;
     color: black;
+}
+
+.edit-profile {
+    height: 100px;
+}
+
+.edit-age-label {
+    line-height: 2em;
+}
+
+.go-to-homepage-button {
+    display: block;
 }
 
 .grownups, .history {
@@ -146,7 +176,7 @@ select {
     padding: 0px 0px 20px;
 }
 
-.grownups h2 {
+.grownups h2, .history h2 {
     margin: 0px 0px 20px;
 }
 
@@ -189,12 +219,10 @@ select {
 
 .main-vid {
     height: 320px;
-    width: 568px;
+    width: 566px;
 }
 
-
 .main-vid-container {
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -204,55 +232,157 @@ select {
     background-color: #000;
 }
 
+.main-vid-text-big {
+    font-size: 26px;
+    padding: 0px 20px 0px 20px;
+    margin: 0px;
+}
+
 .margin-auto {
     margin: auto;
 }
 
 .nav-button {
-    display: block;
-    width: 95%;
-    padding: 0px;
+    padding: 2px 7px 2px;
     margin: 0px auto 10px auto;
 }
 
-.nav-button:hover {
+.nav-button:hover .nav-button:active {
     background-color: rgb(85, 85, 85);
 }
 
-.profile-section-button {
-    display: block;
-    width: 150px;
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgb(44, 20, 58); 
+    z-index: 3;
+    cursor: pointer;
+    text-align: center;
+}
+
+.overlay-button-top, .overlay-button-bottom {
+    font-size: 16px;
+    height: 50px;
+    padding: 2px 15px 2px;
+}
+
+.overlay-button-top {
+    margin: 5px 0px 20px;
+}
+
+.overlay-button-bottom {
+    margin: 20px 0px 20px;
+}
+
+.overlay-highlight {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.overlay-logo {
+    width: 80px;
+    margin: 10px;
+}
+
+.overlay-logo:hover {
+    transform: scale(1.2)
+}
+
+.overlay-text {
+    padding: 0px 5vw 0px 5vw;
+}
+
+.overlay-text-big {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.overlay-text-medium {
+    color: #2c133a;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.overlay-text-small {
+    font-size: 20px;
+    padding: 5px;
+
+}
+
+.purple {
+    background-color: rgb(104, 49, 136);
 }
 
 .profile, .selected-profile {
+    border: 3px solid #fff;
+    border-radius: 6px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 60px;
+    justify-content: space-evenly;
     padding: 10px;
+    cursor: pointer;
 }
 
-.profile:hover {
-    background-color: rgb(85, 85, 85);
+.profile {
+    width: 123px;
+    margin: 10px 0px 0px;
+}
+
+.profile-buttons-div {
+    margin: 20px 0px;
 }
 
 .profile-p {
     margin: 0px;
 }
 
-.relative {
-    position: relative;
+.profiles-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.profiles-section, form {
+    margin: 20px 0px 0px;
+}
+
+.rainbow-logo {
+    display: block;
+    width: 80px;
+    margin: 20px auto 10px auto;
+}
+
+.red {
+    color: red;
+    font-size: 20px;
 }
 
 .selected-profile {
-    display: none;
+    height: 60px;
+}
+
+.selected-profile-div {
     position: absolute;
-    top: 10px;
     right: 10px;
 }
 
-.selected-profile:hover {
-    background-color: #000;
+.selected-show-icon {
+    height: 140px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: auto
 }
 
 .show-option {
@@ -274,9 +404,9 @@ select {
 }
 
 .show-option {
-    height: 190px;
+    height: 200px;
     width: 150px;
-    background-color: #000;
+    background-color: #0000;
     text-align: center;
 }
 
@@ -284,7 +414,7 @@ select {
     height: 120px;
     border-radius: 50%;
     padding: 10px;
-    margin: auto  
+    margin: auto
 }
 
 .show-png:hover {
@@ -298,7 +428,7 @@ select {
 .shows-back-arrow {
     display: none;
     position: absolute;
-    top: -37px;
+    top: -23px;
     left: -18px;
     padding: 20px;
     margin-top: 0;
@@ -311,19 +441,6 @@ select {
 
 .static {
     position: static;
-}
-
-.toggle-about {
-    text-align: center;
-    margin: 20px 20px;
-}
-
-.toggle-profiles {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    margin: 20px 20px;
 }
 
 .vid-back-arrow {
@@ -341,7 +458,7 @@ select {
 
 .vid-title {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 170px;
     width: 100%;
     padding: 5px 0 5px;
@@ -351,9 +468,7 @@ select {
 
 .video-option {
     position: relative;
-    z-index: auto;
-    width: 260px;
-    height: 220px;
+    height: 260px;
     margin: 0px 10px 0px 10px;
 }
 
@@ -387,12 +502,8 @@ select {
 
 @media screen and (min-height: 450px) {
 
-    .vid-title {
-        top: 200px;
-    }
-
     header {
-        width: 100%;
+        width: 100vw;
     }
 
     main {
@@ -403,13 +514,9 @@ select {
         position: fixed;
     }
 
-    .grownups, .history {
-        padding: 160px 0px 0px;
-    }
-
     .grownups-back-arrow, .history-back-arrow {
-        top: 140px;
-        left: -18px;
+        top: -5px;
+        left: -14px;
     }
 
     .main-padding {
@@ -417,8 +524,8 @@ select {
     }
 
     .main-vid {
-        width: 375px;
-        height: 211px;
+        width: 320px;
+        height: 180px;
     }
 
     .main-vid-container {
@@ -427,26 +534,48 @@ select {
     }
 
     .video-option {
-        height: 245px;
-        width: 80%;
+        height: 260px;
         margin: 0px auto 0px auto;
     }
 
     .video-section {
-        width: 100%;
         flex-direction: column;
-        /* flex-wrap: wrap; */
-        /* justify-content: space-between; */
     }
 
     .vid-thumbnail {
         height: 230px;
         width: 306px;
+        margin: 0px auto 0px auto;
+    }
 
+    .vid-title {
+        top: 200px;
     }
 }
 
-@media screen and (min-width: 830px) {
+@media screen and (min-height:450px) and (min-width: 375px) {
+    
+    .main-vid {
+        width: 375px;
+        height: 211px;
+    }
+
+    button {
+        padding: 2px 7px 2px;
+    }
+
+    .grownups-back-arrow, .history-back-arrow {
+        top: -3px;
+        left: -5px;
+    }
+
+    .shows-back-arrow {
+        top: -24px;
+        left: -18px;
+    }
+}
+
+@media screen and (min-height:450px) and (min-width: 830px) {
     button:hover {
         color: #000;
         background-color: #fff;
@@ -488,6 +617,57 @@ select {
 
     .main-vid-container {
         height: 315px;
+    }
+
+    .main-vid-text-big {
+        font-size: 30px;
+        padding: 0px 60px 0px 60px;
+    }
+
+    .overlay-button-top, .overlay-button-bottom {
+        font-size: 20px;
+        height: 50px;
+        padding: 2px 15px 2px;
+    }
+    
+    .overlay-button-top {
+        margin: 5px 0px 20px;
+    }
+    
+    .overlay-button-bottom {
+        margin: 20px 0px 20px;
+    }    
+
+    .overlay-logo {
+        width: 120px;
+        margin: 20px;
+    }
+
+    .overlay-text {
+        padding: 0px 20vw 0px 20vw;
+    }
+
+    .overlay-text-big {
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .overlay-text-medium {
+        font-size: 26px;
+    }
+
+    .rainbow-logo {
+        display: block;
+        width: 200px;
+        margin: 10px auto 10px auto;
+    }
+
+    .red {
+        font-size: 26px;
+    }
+
+    .selected-show-icon {
+        height: 160px;
     }
 
     .show-option {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +9,34 @@
 </head>
 
 <body id="body">
+    <div id="overlay" class="overlay">
+        <div id="overlay-text" class="overlay-text"></div>
+    </div>
     <div class="container">
-        <header id="header" class="fixed">
-            <button id="selected-profile" class="selected-profile"></button>
+        <header id="header">
+            <div id="selected-profile" class="selected-profile-div"></div>
             <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
             <nav class="button-section">
                 <button class="grownups-button">Grownups</button>
-                <button class="shows-button">Shows</button>
+                <button class="videos-button">Videos</button>
+                <button class="js-shows-button">Shows</button>
                 <button class="history-button">History</button>
             </nav>
-            <div class="main-vid-container js-main-vid-container"></div>
+            <div class="js-vid-player-section">
+                <div class="js-vid-player-placeholder">
+                    <section class="js-first-video-placeholder">
+                        <img src="images/chivolo-logo-rainbow.png" alt="Chivolo-logo" class="rainbow-logo">
+                        <h1 class="main-vid-text-big">Click on a video option to watch it here!</h1>
+                    </section>
+                    <section class="js-show-video-placeholder">
+                        <h1 class="main-vid-text-big">Click on a video option to watch it here!</h1>
+                    </section>
+                </div>
+                <div class="main-vid-container js-main-vid-container"></div>
+            </div>
         </header>
     
-
-        <main id="main" class="main-padding">
+        <main id="main">
             <div class="video-section js-video-section"></div>
 
             <section id="shows-section" class="shows-section js-shows-section">
@@ -34,11 +48,11 @@
             <section id="grownups-section" class="grownups js-grownups">
                 <a href="#body" class="grownups-back-arrow"><img src="images/back-arrow-1.png" alt="back-arrow" class="back-arrow"></a>
                 <h2>Grownups</h2>
-
-                <button class="nav-button js-profiles-button">Profiles</button>
-                <div id="toggle-profiles" class="toggle-profiles">
+                <section id="profiles-section" class="profiles-section">
+                    <h3>Profiles</h3>
                     <div id="current-profiles" class="current-profiles"></div>
-                    <form id="new-profile-form" action="/some-server-endpoint" method="post" class="new-profile-form">
+                    <div id="js-profile-instructions"></div>
+                    <form id="new-profile-form">
                         <fieldset>
                             <legend>Kid Profile</legend>
                             <div class="label-input-pair">
@@ -48,7 +62,8 @@
                             
                             <div class="label-input-pair"> 
                                 <label for="age">Age</label>
-                                <select name="age" id="age">
+                                <select name="age" id="age" size="1" required>
+                                    <option value="" label="Age"></option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -68,36 +83,50 @@
                                 </select>
                             </div>
                         </fieldset>
-                        <button class="submit">Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
-                    <button class="profile-section-button js-new-profile-button">New Profile</button>
-                    <button class="profile-section-button js-edit-profiles">Edit Profiles</button>
-                    <button class="done-editing js-done-editing">Done Editing</button>
-                </div>
-                
-                <button class="nav-button js-about-button">About</button>
-                <div id="toggle-about" class="toggle-about">
+                    <div class="profile-buttons-div">
+                        <button class="go-to-homepage-button js-go-to-homepage-button"></button>
+                        <button class="profile-section-button js-edit-profiles">Edit Profiles</button>
+                        <button class="done-editing js-done-editing">Done Editing</button>
+                        <button class="profile-section-button js-new-profile-button">New Profile</button>
+                    </div>
+                </section>
+
+                <section id="about-section" class="about-section">
+                    <h3>About Chivolo</h3>
                     <p>
+                        Chivolo is a place for kids to watch fun videos that reflect the diversity of the real world.
+                    </p>
+                    <p>  
                         When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old stepdaughter's history 
                         on the YouTube Kids app, she found that very few videos featured characters 
                         of color.  Georgia created Chivolo with content from the YouTube Data API to provide families 
-                        with kids' videos that reflect the diversity of the real world, helping children form positive 
-                        associations with people of all races.
+                        with kids' videos that reflect the diversity of the real world, helping children connect with 
+                        characters who look like themselves and form positive associations with people of all races.
                     </p>
-                    <h3>Profiles</h3>
+                    <h4>Grownups</h4>
                     <p>
-                        Profiles help you curate content based on your child's age.  At this point, the profiles you create 
-                        will be erased when you close your web browser or refresh the Chivolo page.  Georgia plans to update
-                        Chivolo to address this issue when she learns how to use servers.
+                        Want to customize your child's viewing experience based on their age?  You can create a profile for each 
+                        of your children in the Grownups section.  At this point, the profiles you create will be erased when you 
+                        close your web browser or refresh the Chivolo page.  Georgia plans to update
+                        Chivolo to address this issue when she learns how to use servers.  In the meantime, an easy get-around 
+                        to avoid losing profile data is to simply leave a browser page open with the Chivolo app.
                     </p>
-                    <h3>Contact</h3>
+                    <h4>Shows</h4>
+                    <p>
+                        Want to find more videos featuring your child's favorite character?  Click a show icon in the Shows section to see recent episodes.
+                    </p>
+                    <h4>History</h4>
+                    <p>
+                        Does your kid want to re-watch a video they saw on Chivolo?  Check out the History section to find your child's viewing history.
+                    </p>
+                    <h4>Contact</h4>
                     <p>
                         Have show recommendations?  Technical issues?  Suggestions?  Please email Georgia!
                     </p>
-                    <a href="mailto:georgia.kirkpatrick@gmail.com">georgia.kirkpatrick@gmail.com</a>
-                
-                </div>
-
+                    <a href="mailto:georgia.kirkpatrick@gmail.com" target="_blank">georgia.kirkpatrick@gmail.com</a>
+                </section>
             </section>
 
             <section id="history-section" class="history js-history">

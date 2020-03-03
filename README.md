@@ -12,12 +12,12 @@ When Chivolo's creator, Georgia Kirkpatrick, reviewed her four-year-old stepdaug
 
 ## Summary
 
-The main page of the app displays a video player, video options, and show playlist options.  The landing page relies on an abundance of images to make the app useable for pre-readers.  The video player has familiar YouTube buttons and can be maximized to full-screen.  Kids select videos to play in the video player by tapping the video options.  Kids choose videos with their favorite characters by clicking the show icons near the bottom of the main page.  Content is fetched from the YouTube Data API on load and new content is added by YouTube playlist owners.  Parents have the option to filter shows based on their child's age by tapping the "Grownups" button and creating a profile for one or more children.  The "History" button lists all the videos that have been played on the app so kids can replay videos they enjoyed while parents can review the content their child has viewed.
+The main page of the app displays a video player, video options, and show playlist options.  The landing page includes an abundance of images to make the app useable for pre-readers.  The video player has familiar YouTube buttons and can be maximized to full-screen.  Kids select videos to play in the video player by tapping the video options.  Kids choose videos with their favorite characters by clicking the show icons near the bottom of the main page.  Content is fetched from the YouTube Data API on load and new content is added by YouTube playlist owners.  Parents have the option to filter shows based on their child's age by tapping the "Grownups" button and creating a profile for one or more children.  The "History" button lists all the videos that have been played on the app so kids can replay videos they enjoyed while parents can review the content their child has viewed.
 
 
-Main Page / Landing Page:
+Main Page / Videos Page:
 
-![Chivolo Main Page](images/screen-shot-chivolo-main-page.png)
+![Chivolo Main Page](images/screen-shot-chivolo-main-video-page.png)
 
 Shows Section (bottom of main page):
 
