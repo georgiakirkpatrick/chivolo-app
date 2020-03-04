@@ -592,7 +592,7 @@ function overlayPageThree() {
     $('#overlay-text').html(`
         <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
         <h1 class="overlay-text-big">Welcome to Chivolo!</h1>
-        <p class="overlay-text-big">Been here before?</p>
+        <h2 class="overlay-text-big">Been here before?</h2>
         <button id="overlay-button" class="overlay-button-top">Click here to dismiss this intro</button>
         <div class="overlay-highlight">
             <p class="overlay-text-medium">To find more videos featuring your child's favorite character click a show icon in the <span class="red">Shows</span> section.</p>
@@ -615,7 +615,7 @@ function overlayPageTwo() {
     $('#overlay-text').html(`
         <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
         <h1 class="overlay-text-big">Welcome to Chivolo!</h1>
-        <p class="overlay-text-big">Been here before?</p>
+        <h2 class="overlay-text-big">Been here before?</h2>
         <button id="overlay-button" class="overlay-button-top">Click here to dismiss this intro</button>
         <div class="overlay-highlight">
             <p class="overlay-text-medium">Want to customize your child's viewing experience based on their age?  You can create a profile for each of your children in the <span class="red">Grownups</span> section.</p>
@@ -640,7 +640,7 @@ function overlayTextPageOne() {
     $('#overlay-text').html(`
         <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
         <h1 class="overlay-text-big">Welcome to Chivolo!</h1>
-        <p class="overlay-text-big">Been here before?</p>
+        <h2 class="overlay-text-big">Been here before?</h2>
         <button id="dismiss-overlay" class="overlay-button-top">Click here to dismiss this intro</button>
         <div class="overlay-highlight">
             <p class="overlay-text-medium">Chivolo is a place for kids to watch fun videos that reflect the diversity of the real world.</p>
@@ -723,7 +723,7 @@ function showSelector(selectedShow) {
         $('.js-video-section').append(`
             <article class="video-option js-video-option" data-key="${vidI}" data-thumb="${vidThumbnailI}" data-title="${vidTitleI}">
                 <img src=${vidThumbnailI} alt=${vidTitleDashesI} class="vid-thumbnail">
-                <h4 class="vid-title">${vidTitleI}</h4>
+                <h3 class="vid-title">${vidTitleI}</h3>
             </article>` )
     }
 
@@ -755,7 +755,7 @@ function listenForVidSelection() {
         $('.js-his-column-reverse-div').append(`
             <article class="video-option js-video-option" data-key="${selectedVidId}" data-thumb="${vidThumbnail}" data-title="${vidTitle}">
                 <img src=${vidThumbnail} alt=${vidTitleDashes} class="vid-thumbnail">
-                <h4 class="vid-title">${vidTitle}</h4>
+                <h3 class="vid-title">${vidTitle}</h3>
             </article>`
         )
     })
@@ -778,7 +778,7 @@ function displayLatestVid(latestVidForShow) {
     $('.js-video-section').append(`
             <article class="video-option" data-key="${vid}" data-thumb="${vidThumbnail}" data-title="${vidTitle}">
                 <img src=${vidThumbnail} alt=${vidTitleDashes} class="vid-thumbnail">
-                <h4 class="vid-title">${vidTitle}</h4>
+                <h3 class="vid-title">${vidTitle}</h3>
             </article>`
     )
 }
@@ -787,7 +787,7 @@ function displayShowOption(show) {
     $('.js-show-option-container').append(`
             <div class="show-option js-show-option" data-show=${show.imgAlt}>
                 <img src=${show.iconImg} alt=${show.imgAlt} class="show-png">
-                <h4 class="show-title">${show.playlistTitle}</h4>
+                <h3 class="show-title">${show.playlistTitle}</h3>
             </div>`
     )
 }

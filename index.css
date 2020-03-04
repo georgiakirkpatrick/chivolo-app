@@ -472,6 +472,11 @@ select {
     margin: 0px 10px 0px 10px;
 }
 
+.video-option h3 {
+    line-height: 1.3;
+    font-size: 16px;
+}
+
 .video-section {
     display: flex;
     flex-direction: row;
@@ -672,6 +677,11 @@ select {
 
     .show-option {
         width: 150px;
+    }
+
+    .show-option h3 {
+        line-height: 1.3;
+        font-size: 16px;
     }
 
     .video-option {
