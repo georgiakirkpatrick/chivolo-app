@@ -168,7 +168,6 @@ let allChivoloShowsWithItems = [
 
 function listenForDoneEditing() {
     $('.profiles-section').on('click', '.js-done-editing', function() {
-        console.log('done editing clicked')
 
         $('.js-edit-buttons-div').hide()
         $('.js-edit-profiles').show()
@@ -566,7 +565,7 @@ function overlayPageFour() {
     $('#overlay-text').html(`
         <img src="images/chivolo-logo-no-background-white.png" alt="Chivolo-logo" class="logo">
         <h1 class="overlay-text-big">Welcome to Chivolo!</h1>
-        <p class="overlay-text-big">Been here before?</p>
+        <h2 class="overlay-text-big">Been here before?</h2>
         <button id="overlay-button" class="overlay-button-top">Click here to dismiss this intro</button>
         <div class="overlay-highlight">
             <p class="overlay-text-medium">Does your kid want to re-watch a video they saw on Chivolo?  Check out the <span class="red">History</span> section to find your child's viewing history.  That's it!  Click anywhere to go to the homepage.</p>
