@@ -2,11 +2,7 @@
     
 const allChivoloShows = [
 // The allChivoloPlaylists array includes information about all the shows approved for the Chivolo app.
-// YouTube Data API fetch details included in "apiUrl" in allChivoloShows:
     // playlistItems URL is https://www.googleapis.com/youtube/v3/playlistItems
-    // API key currently used in fetch request (g.k): AIzaSyCwZJAXrWsnUl1jnmUoKKisHqSZL9OE6f0
-    // First alternate API key (sp): AIzaSyB62M6Hvk8QxhFLK4BgJTkjS6mz_iQm4vM
-    // Second alternate API key (kenti): AIzaSyDNkjTr8IPl81ufhNlte5V1czQ2g4v1aEA
     // maxResults is set to 20
 
     {playlistTitle: "Bino and Fino",
