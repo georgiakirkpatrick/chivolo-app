@@ -1,6 +1,6 @@
 'use strict';
 
-const apiUrl = "http://localhost:5000/chivolo"
+const apiUrl = "https://chivolo-server.onrender.com/chivolo"
 let storedShowData = []
 
 function listenForDoneEditing() {
